@@ -1,0 +1,24 @@
+{'choice': 3, 'message': 'not so good', 'createdAt': '2022-03-19T08:37:45.344Z', 'surveyResult': 'detractor'}
+{'message': 'Kati mobile feedback!', 'surveyResult': 'promoter', 'createdAt': '2022-04-22T07:44:34.769Z', 'choice': 9}
+{'choice': 8, 'message': 'love the service', 'surveyResult': 'passive', 'createdAt': '2022-04-28T21:11:07.437Z'}
+{'message': 'Paragraph', 'surveyResult': 'detractor', 'createdAt': '2022-04-29T17:38:02.639Z', 'choice': 1}
+{'message': 'Paragraph', 'createdAt': '2022-04-29T17:38:53.140Z', 'choice': 1, 'surveyResult': 'detractor'}
+{'surveyResult': 'detractor', 'createdAt': '2022-04-29T17:45:44.506Z', 'choice': 1, 'message': 'Paragraph'}
+{'choice': 10, 'surveyResult': 'promoter', 'message': 'Love the work you do!', 'createdAt': '2022-04-19T08:37:45.344Z'}
+{'choice': 10, 'createdAt': '2022-02-19T08:37:45.344Z', 'message': 'Great work!', 'surveyResult': 'promoter'}
+{'choice': 10, 'createdAt': '2021-10-21T10:45:43.146Z', 'surveyResult': 'promoter', 'message': 'old data'}
+{'createdAt': '2022-04-21T10:37:15.760Z', 'choice': 10, 'surveyResult': 'promoter', 'message': 'Amazing!'}
+{'createdAt': '2022-04-29T17:55:16.666Z', 'message': 'Beyond leg building discussion and fact career. Drop as reflect family station. Together air answer room participant plan most. Amount sea lay suddenly along paper stand.', 'surveyResult': 'detractor', 'choice': 1}
+{'message': '"Good stuff"', 'choice': 9, 'surveyResult': 'promoter', 'createdAt': '2022-03-19T08:37:45.344Z'}
+{'message': 'lovely day', 'choice': 8, 'createdAt': '2022-05-02T13:19:22.076Z', 'surveyResult': 'passive'}
+{'surveyResult': 'detractor', 'choice': 1, 'message': 'Paragraphs 5', 'createdAt': '2022-04-29T17:50:22.854Z'}
+{'surveyResult': 'detractor', 'createdAt': '2022-01-19T08:37:45.344Z', 'choice': 2, 'message': 'Grumpy january'}
+{'createdAt': '2022-03-19T08:37:45.344Z', 'message': 'reasonable service', 'choice': 7, 'surveyResult': 'passive'}
+{'surveyResult': 'promoter', 'message': 'Everything was amazing!', 'choice': 9, 'createdAt': '2022-04-21T10:34:48.151Z'}
+{'message': 'older data', 'surveyResult': 'promoter', 'createdAt': '2021-11-21T10:45:43.146Z', 'choice': 9}
+{'createdAt': '2022-04-29T11:48:59.336Z', 'choice': 1, 'message': 'Generate Random String', 'surveyResult': 'detractor'}
+{'choice': 6, 'message': '2105 amrita', 'surveyResult': 'detractor', 'createdAt': '2022-04-29T18:05:47.751Z'}
+{'surveyResult': 'promoter', 'createdAt': '2022-05-02T10:28:48.982Z', 'message': 'From embed test May', 'choice': 10}
+{'message': 'amrita 2101', 'createdAt': '2022-04-29T18:01:30.692Z', 'choice': 5, 'surveyResult': 'detractor'}
+{'message': 'From embed', 'surveyResult': 'promoter', 'createdAt': '2022-04-21T15:08:46.089Z', 'choice': 10}
+{'choice': 1, 'surveyResult': 'detractor', 'createdAt': '2022-04-29T17:48:27.137Z', 'message': 'Lorem Epsem'}
