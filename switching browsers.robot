@@ -32,7 +32,6 @@ Open Dashboard Application
 
 
 
-
 Login User in Dashboard
     Switch Browser    dashboard
     ${window_handles}=    Get Window Handles
@@ -80,17 +79,22 @@ Survey Form can be submitted with message
     ${rating}=    Generate Random String    1    12345678910
     Log To Console    ${rating}
     Click Element    xpath://*[local-name()='svg' and @value=${rating} and @class='star']
-    ${lorem}=    Paragraph    5
+    ${lorem}=    Paragraph    3
     ${random}=    Generate Random String
     Log    ${lorem}
     Input Text    ${FEEDBACK_AREA}    ${lorem}
-    ${input_value}   Get Value    ${FEEDBACK_AREA}
+    ${input_value}=   Get Value    ${FEEDBACK_AREA}
+    Set Test Variable    ${FEEDBACK_TEXT}    ${input_value}
     Log    ${input_value}
     Log To Console    ${input_value}
     Click Button    ${SEND_BUTTON}
     Element Should Be Visible    ${THANKYOU_BUTTON}
     Sleep    4
-
-Input Value in form is matched in Dashboard
     Open Dashboard Application
     Login User in Dashboard
+    Sleep    5
+    Wait Until Element Contains    xpath://p[@class='message'][0]    ${FEEDBACK_TEXT}
+    Element Should Contain    xpath://p[@class='message'][0]    ${FEEDBACK_TEXT}
+    Sleep    5
+    
+    
