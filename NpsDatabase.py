@@ -23,10 +23,10 @@ class NpsDatabase:
         #docs = ref.stream()
         #docs = ref.where(u'choice', u'>', 9).stream()
         #docs = ref.where(u'createdAt', u'<', datetime.today()).stream()
-        #docs = ref.where(u'surveyResult', u'==', 'promoter').stream()
+        docs = ref.where(u'surveyResult', u'==', 'promoter').stream()
         #docs = ref.where(u'surveyResult', u'==', 'detractor').stream()
         #docs = ref.where(u'surveyResult', u'==', 'passive').stream()
-        docs = ref.where(u'choice', u'>', 9).stream()
+        #docs = ref.where(u'choice', u'>', 9).stream()
 
         result = ""
         for doc in docs:

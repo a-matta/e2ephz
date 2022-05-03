@@ -4,13 +4,12 @@ Library    SeleniumLibrary
 Library    Collections
 Library    String
 Library    FakerLibrary
-Test Setup    Open Survey Form Application
 
 
 *** Variables ***
 ${BROWSER}    chrome
-${SURVEY_URL}    http://localhost:3001
-${DASHBOARD_URL}    http://localhost:3000
+${SURVEY_URL}    http://localhost:3000
+${DASHBOARD_URL}    http://localhost:3001
 ${HEART}    class:star
 ${FEEDBACK_AREA}    name:message
 ${random_string}    Generate Random String
@@ -22,6 +21,8 @@ ${GOOGLE_LOGIN_EMAIL_INPUT}    id:identifierId
 ${GOOGLE_LOGIN_EMAIL_PASSWORD}    name: password
 ${DASHBOARD_LANDING_PAGE}    class:header
 
+
+
 *** Keywords ***
 Open Survey Form Application
     Open Browser    ${SURVEY_URL}    ${BROWSER}    survey_form
@@ -29,8 +30,10 @@ Open Survey Form Application
 Open Dashboard Application
     Open Browser    ${DASHBOARD_URL}    ${BROWSER}    dashboard
 
+
+
+
 Login User in Dashboard
-    Sleep    2
     Switch Browser    dashboard
     ${window_handles}=    Get Window Handles
     ${window_identifier}=    Get Window Titles
@@ -70,17 +73,23 @@ Login User in Dashboard
 
 *** Test Cases ***
 Survey Form can be submitted with message
+    Open Survey Form Application
     Click Element    ${HEART}
     Wait Until Element Is Visible    ${FEEDBACK_AREA}
     Press Keys    ${FEEDBACK_AREA}    RETURN
+    ${rating}=    Generate Random String    1    12345678910
+    Log To Console    ${rating}
+    Click Element    xpath://*[local-name()='svg' and @value=${rating} and @class='star']
     ${lorem}=    Paragraph    5
+    ${random}=    Generate Random String
     Log    ${lorem}
     Input Text    ${FEEDBACK_AREA}    ${lorem}
-     ${input_value}   Get Value    ${FEEDBACK_AREA}
+    ${input_value}   Get Value    ${FEEDBACK_AREA}
     Log    ${input_value}
     Log To Console    ${input_value}
     Click Button    ${SEND_BUTTON}
     Element Should Be Visible    ${THANKYOU_BUTTON}
+    Sleep    4
 
 Input Value in form is matched in Dashboard
     Open Dashboard Application
