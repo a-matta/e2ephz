@@ -85,7 +85,6 @@ Survey Form can be submitted with message
     Input Text    ${FEEDBACK_AREA}    ${lorem}
     ${input_value}=   Get Value    ${FEEDBACK_AREA}
     Set Test Variable    ${FEEDBACK_TEXT}    ${input_value}
-    Log    ${input_value}
     Log To Console    ${input_value}
     Click Button    ${SEND_BUTTON}
     Element Should Be Visible    ${THANKYOU_BUTTON}
@@ -93,8 +92,8 @@ Survey Form can be submitted with message
     Open Dashboard Application
     Login User in Dashboard
     Sleep    5
-    Wait Until Element Contains    xpath://p[@class='message'][0]    ${FEEDBACK_TEXT}
-    Element Should Contain    xpath://p[@class='message'][0]    ${FEEDBACK_TEXT}
+    Element Should Contain    xpath://p[@class='message']    ${FEEDBACK_TEXT}
+    Log To Console    ${FEEDBACK_TEXT}
     Sleep    5
     
     
