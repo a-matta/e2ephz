@@ -26,9 +26,11 @@ ${DASHBOARD_LANDING_PAGE}    class:header
 *** Keywords ***
 Open Survey Form Application
     Open Browser    ${SURVEY_URL}    ${BROWSER}    survey_form
+    Maximize Browser Window
 
 Open Dashboard Application
     Open Browser    ${DASHBOARD_URL}    ${BROWSER}    dashboard
+    Maximize Browser Window
 
 
 
@@ -73,13 +75,13 @@ Login User in Dashboard
 *** Test Cases ***
 Survey Form can be submitted with message
     Open Survey Form Application
-    Click Element    ${HEART}
-    Wait Until Element Is Visible    ${FEEDBACK_AREA}
-    Press Keys    ${FEEDBACK_AREA}    RETURN
+    #Click Element    ${HEART}
+    Wait Until Element Is Visible    ${HEART}
+    #Press Keys    ${FEEDBACK_AREA}    RETURN
     ${rating}=    Generate Random String    1    12345678910
-    Log To Console    ${rating}
+    Log    ${rating}
     Click Element    xpath://*[local-name()='svg' and @value=${rating} and @class='star']
-    ${lorem}=    Paragraph    3
+    ${lorem}=    Paragraph
     ${random}=    Generate Random String
     Log    ${lorem}
     Input Text    ${FEEDBACK_AREA}    ${lorem}
@@ -94,6 +96,5 @@ Survey Form can be submitted with message
     Sleep    5
     Element Should Contain    xpath://p[@class='message']    ${FEEDBACK_TEXT}
     Log To Console    ${FEEDBACK_TEXT}
-    Sleep    5
-    
+    Close All Browsers
     
