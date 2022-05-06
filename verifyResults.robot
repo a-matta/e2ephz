@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    Collections
+Library    DateTime
 
 *** Variables ***
 ${BROWSER}    chrome
@@ -11,6 +12,8 @@ ${GOOGLE_LOGIN_WINDOW_TITLE_PATTERN}    *Google*
 ${GOOGLE_LOGIN_EMAIL_PASSWORD}    name: password
 ${DASHBOARD_LANDING_PAGE}    class:header
 ${PROMOTER_SCORE_CALCULATION_TITLE}    xpath://div[@class='header-container']/h1
+${START_DATE}    id:start
+${END_DATE}    id:end
 
 
 *** Keywords ***
@@ -57,3 +60,5 @@ Login User in Dashboard
     Switch Window    ${main_app_handle}
     Sleep    5
     Wait Until Element Contains    ${PROMOTER_SCORE_CALCULATION_TITLE}    Promoter Score Calculation
+    Click Element    ${START_DATE}
+    Click 

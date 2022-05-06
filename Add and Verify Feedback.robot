@@ -20,6 +20,8 @@ ${GOOGLE_LOGIN_WINDOW_TITLE_PATTERN}    *Google*
 ${GOOGLE_LOGIN_EMAIL_INPUT}    id:identifierId
 ${GOOGLE_LOGIN_EMAIL_PASSWORD}    name: password
 ${DASHBOARD_LANDING_PAGE}    class:header
+${PROMOTER_SCORE_CALCULATION_TITLE}    xpath://div[@class='header-container']/h1
+
 
 
 
@@ -70,7 +72,7 @@ Login User in Dashboard
     Press Keys    ${GOOGLE_LOGIN_EMAIL_PASSWORD}    RETURN
     Switch Window    ${main_app_handle}
     Sleep    5
-    Wait Until Element Contains    xpath://*[contains(concat(' ', @class, ' '), ' header ')]    Net Promoter Score Calculation
+    Wait Until Element Contains    ${PROMOTER_SCORE_CALCULATION_TITLE}    Promoter Score Calculation
 
 *** Test Cases ***
 Survey Form can be submitted with message
@@ -78,7 +80,7 @@ Survey Form can be submitted with message
     Wait Until Element Is Visible    ${HEART}
     ${rating}=    Generate Random String    1    12345678910
     Log    ${rating}
-    Click Element    xpath://*[local-name()='svg' and @value=${rating} and @class='star']
+    Click Element    xpath://div[@class='circle']//*[@value=${rating} and @class='star']
     ${lorem}=    Paragraph
     ${random}=    Generate Random String
     Log    ${lorem}
