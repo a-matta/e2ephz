@@ -1,0 +1,32 @@
+1651947658730	geckodriver	INFO	Listening on 127.0.0.1:60255
+1651947659249	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "60256" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/sb/71q6kqj92rd216rw7g422gjc0000gn/T/rust_mozprofileWb9lbF"
+2022-05-07 21:20:59.521 plugin-container[7010:10484674] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-07 21:20:59.522 plugin-container[7010:10484674] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1651947659523	Marionette	INFO	Marionette enabled
+2022-05-07 21:20:59.524 plugin-container[7010:10484674] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-07 21:20:59.524 plugin-container[7010:10484674] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-07 21:20:59.524 plugin-container[7010:10484699] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-07 21:20:59.524 plugin-container[7010:10484699] nil host used in call to allowsAnyHTTPSCertificateForHost:
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/sb/71q6kqj92rd216rw7g422gjc0000gn/T/rust_mozprofileWb9lbF/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+DevTools listening on ws://localhost:60256/devtools/browser/1d57d71e-9387-4f55-8db4-da1b5a901c67
+1651947660412	Marionette	INFO	Listening on port 60272
+Read port: 60272
+1651947660505	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://accounts.google.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://accounts.google.com"
+JavaScript warning: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=418295746574-vvbl0nqkup7gsl5flsa7bau8k27rnof1.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fpromoterscore-14480.firebaseapp.com%2F__%2Fauth%2Fhandler&state=AMbdmDkp3Q3WNiy9aLKICdvmM-g_EXgcno7R712XYBMinM-axDOehaBJKzR82YGgV5CHgrbEi68VCHTtUsY9dBxCsDomXQyNo4WgFpdGTLug8JH7i6hev6HIa3SISdwzeJ8Fm1EkRLVlrckWNPlEPpXSJDTvPPzXOK2pje7TjSsj9HdP5s3OQPvepy-kDm4BMS_GUURd0LK_tu-G1JPs88jhw56JMmoTMK8ULpXSdI21DHcWk3RpNtUjboYspbhqk-UmkfyoKlCX0LSy96y0oaCxgZgzwxuORyMH1ac9JKbpVQR7QD7rWMOzcmbyBkk7NF5rjKPEbbWCCwtK3BU&scope=openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20profile&context_uri=http%3A%2F%2Flocalhost%3A3001 line 1 > eval line 1916 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://accounts.google.com"
+JavaScript warning: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=418295746574-vvbl0nqkup7gsl5flsa7bau8k27rnof1.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fpromoterscore-14480.firebaseapp.com%2F__%2Fauth%2Fhandler&state=AMbdmDkp3Q3WNiy9aLKICdvmM-g_EXgcno7R712XYBMinM-axDOehaBJKzR82YGgV5CHgrbEi68VCHTtUsY9dBxCsDomXQyNo4WgFpdGTLug8JH7i6hev6HIa3SISdwzeJ8Fm1EkRLVlrckWNPlEPpXSJDTvPPzXOK2pje7TjSsj9HdP5s3OQPvepy-kDm4BMS_GUURd0LK_tu-G1JPs88jhw56JMmoTMK8ULpXSdI21DHcWk3RpNtUjboYspbhqk-UmkfyoKlCX0LSy96y0oaCxgZgzwxuORyMH1ac9JKbpVQR7QD7rWMOzcmbyBkk7NF5rjKPEbbWCCwtK3BU&scope=openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20profile&context_uri=http%3A%2F%2Flocalhost%3A3001 line 1 > eval line 3897 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://accounts.google.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://accounts.google.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://accounts.google.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1651947666184	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1651947675943	Marionette	INFO	Stopped listening on port 60272
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+

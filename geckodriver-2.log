@@ -1,0 +1,10 @@
+1651947632434	geckodriver	INFO	Listening on 127.0.0.1:60056
+1651947632802	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "60057" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/sb/71q6kqj92rd216rw7g422gjc0000gn/T/rust_mozprofilen8Wtdq"
+2022-05-07 21:20:35.342 plugin-container[6876:10482818] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-07 21:20:35.343 plugin-container[6876:10482818] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-07 21:20:35.431 plugin-container[6876:10482818] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-07 21:20:35.431 plugin-container[6876:10482818] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-07 21:20:35.432 plugin-container[6876:10482862] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-07 21:20:35.432 plugin-container[6876:10482862] nil host used in call to allowsAnyHTTPSCertificateForHost:
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://localhost:60057/devtools/browser/466cc309-b708-407a-8959-5020eb72a886
