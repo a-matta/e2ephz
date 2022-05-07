@@ -15,7 +15,7 @@ ${PROMOTER_SCORE_CALCULATION_TITLE}    xpath://div[@class='header-container']/h1
 ${START_DATE}    id:start
 ${END_DATE}    id:end
 ${FILTER_BUTTON}    xpath://div[contains(concat(' ', @class, ' ' ), ' datefilter-box ')]/button[text()='Filter']
-
+${RESET_BUTTON}    xpath://div[contains(concat(' ', @class, ' ' ), ' datefilter-box ')]/button[text()='Reset']
 
 *** Keywords ***
 Open Dashboard Application
@@ -66,3 +66,49 @@ Login User in Dashboard
     Input Text    ${END_DATE}    31.12.2019
     Sleep    2
     Click Element    ${FILTER_BUTTON}
+
+Reset User in Dashboard
+    Open Dashboard Application    
+    ${window_handles}=    Get Window Handles
+    #${window_identifier}=    Get Window Titles
+    #Log    ${window_handles}
+    ${main_app_handle}=    Get From List    ${window_handles}    0
+    Click Element    ${GOOGLE_BUTTON}
+    WHILE    True    limit=5
+        ${window_titles}=    Get Window Titles
+        ${match_count}=    Get Match Count    ${window_titles}    ${GOOGLE_LOGIN_WINDOW_TITLE_PATTERN}
+        Log    ${window_titles}
+        Log    ${match_count}
+        Run Keyword If    '${match_count}'>'1'    Fail    Too many Browser Tabs found that meet the "${GOOGLE_LOGIN_WINDOW_TITLE_PATTERN}" pattern.
+        IF    '${match_count}'=='1'
+            BREAK
+        END
+        Sleep    1
+    END
+    ${matches}    Get Matches    ${window_titles}    ${GOOGLE_LOGIN_WINDOW_TITLE_PATTERN}
+    Log    ${matches}
+    Switch Window    ${matches}[0]
+    Input Text    ${GOOGLE_LOGIN_EMAIL_INPUT}    npstestglory@gmail.com
+    Press Keys    ${GOOGLE_LOGIN_EMAIL_INPUT}    RETURN
+    
+    WHILE    True    limit=5
+        ${count}=    Get Element Count   ${GOOGLE_LOGIN_EMAIL_PASSWORD}
+        Log    ${count}
+        IF    '${count}'!='0'
+            BREAK
+        END
+        Sleep    1
+    END
+    Input Text    ${GOOGLE_LOGIN_EMAIL_PASSWORD}    aR7FsedNirgrM2K
+    Press Keys    ${GOOGLE_LOGIN_EMAIL_PASSWORD}    RETURN
+    Switch Window    ${main_app_handle}
+    Sleep    5
+    Wait Until Element Contains    ${PROMOTER_SCORE_CALCULATION_TITLE}    Promoter Score Calculation
+    Input Text    ${START_DATE}    01.01.2019
+    Input Text    ${END_DATE}    31.12.2019
+    Sleep    2
+    Click Element    ${FILTER_BUTTON}
+    Sleep    5
+    Click Element    ${RESET_BUTTON}
+    Sleep    5
+    
