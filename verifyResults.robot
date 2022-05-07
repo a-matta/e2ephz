@@ -14,6 +14,7 @@ ${DASHBOARD_LANDING_PAGE}    class:header
 ${PROMOTER_SCORE_CALCULATION_TITLE}    xpath://div[@class='header-container']/h1
 ${START_DATE}    id:start
 ${END_DATE}    id:end
+${FILTER_BUTTON}    xpath://div[contains(concat(' ', @class, ' ' ), ' datefilter-box ')]/button[text()='Filter']
 
 
 *** Keywords ***
@@ -26,8 +27,8 @@ Open Dashboard Application
 Login User in Dashboard
     Open Dashboard Application    
     ${window_handles}=    Get Window Handles
-    ${window_identifier}=    Get Window Titles
-    Log    ${window_handles}
+    #${window_identifier}=    Get Window Titles
+    #Log    ${window_handles}
     ${main_app_handle}=    Get From List    ${window_handles}    0
     Click Element    ${GOOGLE_BUTTON}
     WHILE    True    limit=5
@@ -60,5 +61,8 @@ Login User in Dashboard
     Switch Window    ${main_app_handle}
     Sleep    5
     Wait Until Element Contains    ${PROMOTER_SCORE_CALCULATION_TITLE}    Promoter Score Calculation
-    Click Element    ${START_DATE}
-    Click 
+    #Click Element    ${START_DATE}
+    Input Text    ${START_DATE}    01.01.2019
+    Input Text    ${END_DATE}    31.12.2019
+    Sleep    2
+    Click Element    ${FILTER_BUTTON}
