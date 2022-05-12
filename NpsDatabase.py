@@ -21,15 +21,12 @@ class NpsDatabase:
         searchDate = datetime.today() - timedelta(days=30)
         unixtime = time.mktime(searchDate.timetuple())
         #docs = ref.stream()
-        #docs = ref.where(u'choice', u'>', 9).stream()
+        docs = ref.where(u'choice', u'>', 3).stream()
         #docs = ref.where(u'createdAt', u'<', datetime.today()).stream()
         docs = ref.where(u'surveyResult', u'==', 'promoter').stream()
         #docs = ref.where(u'surveyResult', u'==', 'detractor').stream()
         #docs = ref.where(u'surveyResult', u'==', 'passive').stream()
-        x=txt.split("-")
-        print(x)
-        print(x[0])
-        docs = ref.where(u'createdAt', u'>=', 2019).stream()
+        #docs = ref.where(u'createdAt', u'>=', 2019).stream()
 
         result = ""
         for doc in docs:

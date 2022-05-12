@@ -8,8 +8,8 @@ Library    FakerLibrary
 
 *** Variables ***
 ${BROWSER}    chrome
-${SURVEY_URL}    http://localhost:3000
-${DASHBOARD_URL}    http://localhost:3001
+${SURVEY_URL}    https://embedtest-mh.netlify.app
+${DASHBOARD_URL}    https://promoterscore-tg.netlify.app
 ${HEART}    class:star
 ${FEEDBACK_AREA}    name:message
 ${random_string}    Generate Random String
