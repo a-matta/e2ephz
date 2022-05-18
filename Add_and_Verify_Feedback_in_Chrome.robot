@@ -66,7 +66,7 @@ Login User in Dashboard
         IF    '${count}'!='0'
             BREAK
         END
-        Sleep    1
+        Sleep    2
     END
     Input Text    ${GOOGLE_LOGIN_EMAIL_PASSWORD}    aR7FsedNirgrM2K
     Press Keys    ${GOOGLE_LOGIN_EMAIL_PASSWORD}    RETURN
